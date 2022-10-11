@@ -10,58 +10,49 @@
 
     <Button
         android:id="@+id/firstFragment"
-        android:layout_width="249dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="36dp"
-        android:text="First Fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="1st Fragment"
         android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/secondFragment"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/secondFragment"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/secondFragment"
-        android:layout_width="251dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="24dp"
-        android:text="Second Fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="48dp"
+        android:text="2nd Fragment"
         android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/frameLayoutHost"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.788"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/frameLayoutHost"
+        app:layout_constraintTop_toBottomOf="@+id/firstFragment" />
 
     <FrameLayout
         android:id="@+id/frameLayoutHost"
-        android:layout_width="249dp"
-        android:layout_height="200dp"
-        android:layout_marginBottom="216dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        android:layout_width="382dp"
+        android:layout_height="172dp"
+        android:layout_marginTop="44dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.779"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondFragment" />
+
 
     <Button
         android:id="@+id/webPageBtn"
         android:layout_width="82dp"
         android:layout_height="64dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginBottom="36dp"
         android:text="Button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="75dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="80dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        app:layout_constraintBottom_toTopOf="@+id/frameLayoutHost"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageButton" />
 
     <TextView
         android:id="@+id/textView"
@@ -74,6 +65,30 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="73dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/webPageBtn"
+        app:layout_constraintEnd_toStartOf="@+id/firstFragment"
+        app:layout_constraintHorizontal_bias="0.175"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_camera"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/imageCamera"
+        android:layout_width="411dp"
+        android:layout_height="247dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:src="#E4ECEC" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
